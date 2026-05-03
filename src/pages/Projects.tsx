@@ -116,7 +116,7 @@ const sections: Section[] = [
 
   {
     id: "4",
-    title: "Leadership & Volunteer",
+    title: "Leadership & Activities",
     children: [
       {
         id: "4.1",

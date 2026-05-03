@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
-import { Globe, Layers, Brush, Cpu } from "lucide-react";
+import { Globe, User, BookOpen, Cpu } from "lucide-react";
 import Divider from "@/components/Divider";
 
 const skills = [
-  { icon: Globe, title: "Website Development", desc: "Building fast, responsive, and modern websites from scratch." },
-  { icon: Layers, title: "Full Stack Development", desc: "End-to-end development covering both frontend and backend systems." },
-  { icon: Brush, title: "UI & UX Design", desc: "Designing clean, intuitive interfaces with great user experience." },
-  { icon: Cpu, title: "AI & Computer Vision", desc: "Building intelligent systems that see and understand the world." },
+  { icon: Globe, title: "Frontend Development", desc: "Building modern and responsive web interfaces." },
+  { icon: Cpu, title: "Developer", desc: "Creating tools for everyday convenience." },
+  { icon: BookOpen, title: "Self-Learning", desc: "Learning new technologies independently through personal projects." },
+  { icon: User, title: "Leadership", desc: "Leading teams through hands-on experience." },
 ];
 
 const Index = () => {
@@ -37,21 +37,33 @@ const Index = () => {
       <Divider />
 
       <section className="max-w-5xl mx-auto px-6 md:px-8">
-        <h2 className="text-3xl md:text-4xl text-center mb-12 animate-fade-in">My Skills</h2>
+        <h2 className="text-3xl md:text-4xl text-center mb-12 animate-fade-in">
+          My Skills
+        </h2>
+
         <div className="grid sm:grid-cols-2 gap-5">
           {skills.map((s, i) => {
             const Icon = s.icon;
+
             return (
               <div
                 key={s.title}
-                className="glass-card rounded-3xl p-7 hover:-translate-y-1 transition-all animate-fade-in"
-                style={{ animationDelay: `${i * 100}ms` }}
+                className="group glass-card rounded-3xl p-7 flex flex-col
+                hover:-translate-y-2 hover:scale-[1.05] hover:shadow-2xl
+                transition-all duration-300 animate-fade-in-left"
+                style={{ animationDelay: `${i * 80}ms` }}
               >
-                <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-white to-secondary flex items-center justify-center mb-4">
+                <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-white to-secondary flex items-center justify-center mb-4 group-hover:scale-110 transition duration-300">
                   <Icon className="w-5 h-5" />
                 </div>
-                <h3 className="text-lg mb-2">{s.title}</h3>
-                <p className="text-sm text-muted-foreground">{s.desc}</p>
+
+                <h3 className="text-lg mb-2 group-hover:drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)] transition">
+                  {s.title}
+                </h3>
+
+                <p className="text-sm text-muted-foreground">
+                  {s.desc}
+                </p>
               </div>
             );
           })}
