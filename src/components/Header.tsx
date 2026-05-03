@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 const links = [
   { to: "/", label: "Home", end: true },
   { to: "/about", label: "About Me" },
-  { to: "/projects", label: "Projects" },
+  { to: "/projects", label: "Experience" },
 ];
 
 const Header = () => {
