@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Roboto+Mono:wght@300;400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 50% 97%;
+    --foreground: 230 30% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 230 30% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 230 30% 12%;
+
+    --primary: 230 30% 12%;
+    --primary-foreground: 40 60% 97%;
+
+    --secondary: 150 60% 92%;
+    --secondary-foreground: 230 30% 12%;
+
+    --muted: 30 30% 94%;
+    --muted-foreground: 230 10% 40%;
+
+    --accent: 150 70% 80%;
+    --accent-foreground: 230 30% 12%;
+
+    --destructive: 0 72% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 30 20% 88%;
+    --input: 30 20% 88%;
+    --ring: 230 30% 12%;
+
+    --radius: 1rem;
+
+  
+    --gradient-pastel: linear-gradient(120deg,
+          #4169e1 0%,
+  #89CFF0 100%);
+    --shadow-soft: 0 8px 30px -10px hsl(230 30% 12% / 0.08);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply text-foreground antialiased;
+    font-family: 'Poppins', system-ui, sans-serif;
+    background: var(--gradient-pastel);
+    background-attachment: fixed;
+    min-height: 100vh;
+  }
+  h1, h2, h3, h4 {
+    font-family: 'Poppins', system-ui, sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+}
+
+@layer utilities {
+  .glass-card {
+    background: hsl(0 0% 100% / 0.55);
+    backdrop-filter: blur(14px);
+    border: 1px solid hsl(0 0% 100% / 0.7);
+    box-shadow: var(--shadow-soft);
+  }
+  .pill-nav {
+    background: hsl(0 0% 100% / 0.7);
+    backdrop-filter: blur(14px);
+    border: 1px solid hsl(0 0% 100% / 0.8);
+    box-shadow: var(--shadow-soft);
+  }
+  .font-mono {
+    font-family: 'Roboto Mono', monospace;
+  }
+}
