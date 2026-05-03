@@ -20,8 +20,8 @@ const Index = () => {
             I'm <span className="italic font-light">Pun</span>.
           </h1>
           <div className="space-y-2 text-foreground/70 text-base md:text-lg max-w-md">
-            <p>This is my personal portfolio website where I share my work</p>
-            <p>And thoughts on technology and design.</p>
+            <p>My personal portfolio</p>
+            <p>Where I share my projects and experiences.</p>
           </div>
           <Link
             to="/about"

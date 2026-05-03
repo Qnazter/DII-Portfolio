@@ -190,13 +190,13 @@ const Projects = () => {
     <>
       <section className="max-w-5xl mx-auto px-6 md:px-8 pt-10 md:pt-16 text-center space-y-5 animate-fade-in">
         <p className="font-mono text-xs uppercase tracking-[0.3em] text-foreground/60">
-          Projects
+          Experience
         </p>
         <h1 className="text-5xl md:text-6xl">
-          Things I've <span className="italic font-light">built</span>.
+          Things I've <span className="italic font-light">done</span>.
         </h1>
         <p className="text-foreground/70 max-w-2xl mx-auto">
-          Organized by category — from professional work to personal experiments.
+          Organized by category — from work experience to activities.
         </p>
       </section>
 

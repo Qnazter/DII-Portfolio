@@ -19,8 +19,7 @@ const About = () => {
           A little <span className="italic font-light">about</span> who I am.
         </h1>
         <p className="text-foreground/70 max-w-2xl mx-auto">
-          I'm a developer who enjoys building polished, performant interfaces — curious
-          about everything from systems to design.
+          I enjoy creating tools that simplify my daily life while exploring new technologies
         </p>
       </section>
 

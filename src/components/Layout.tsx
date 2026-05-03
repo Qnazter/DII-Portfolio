@@ -9,7 +9,7 @@ const Layout = () => {
         <Outlet />
       </main>
       <footer className="text-center text-xs text-muted-foreground py-8">
-        © {new Date().getFullYear()} — Crafted with care
+        © {new Date().getFullYear()} — Pannarat Wattanakraimet. All rights reserved.
       </footer>
     </div>
   );

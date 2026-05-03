@@ -16,7 +16,7 @@ const Header = () => {
       <header className="sticky top-4 z-40 px-4 md:px-8 animate-fade-in">
         <div className="pill-nav max-w-5xl mx-auto rounded-full px-5 md:px-7 py-3 flex items-center justify-between">
           <NavLink to="/" className="text-lg md:text-xl font-bold tracking-tight">
-            Portfolio<span className="text-primary/40">.me</span>
+            Portfolio<span className="text-primary/40">.pannarat</span>
           </NavLink>
           <nav className="hidden md:flex items-center gap-1">
             {links.map((l) => (
