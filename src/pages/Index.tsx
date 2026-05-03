@@ -13,25 +13,49 @@ const Index = () => {
   return (
     <>
       <section className="max-w-5xl mx-auto px-6 md:px-8 grid md:grid-cols-2 gap-10 items-center pt-10 md:pt-16">
-        <div className="space-y-6 animate-fade-in order-2 md:order-1">
+
+        <div className="space-y-6 animate-fade-in">
+
           <h1 className="text-5xl md:text-7xl leading-[1.05]">
             Hello,
             <br />
             I'm <span className="italic font-light">Pun</span>.
           </h1>
+
           <div className="space-y-2 text-foreground/70 text-base md:text-lg max-w-md">
             <p>My personal portfolio</p>
             <p>Where I share my projects and experiences.</p>
           </div>
+
           <Link
             to="/about"
-            className="inline-block mt-4 px-6 py-3 rounded-full bg-white/70 hover:bg-white border border-foreground/10 font-medium transition-all hover:-translate-y-0.5 hover:shadow-[0_10px_30px_-10px_hsl(230_30%_12%/0.2)]"
+            className="inline-block mt-4 px-6 py-3 rounded-full bg-white/70 hover:bg-white 
+            border border-foreground/10 font-medium transition-all 
+            hover:-translate-y-0.5 hover:shadow-[0_10px_30px_-10px_hsl(230_30%_12%/0.2)]"
           >
             Learn About Me →
           </Link>
+
         </div>
-        <div className="order-1 md:order-2 animate-scale-in">
+
+        <div className="flex justify-center md:justify-end animate-scale-in">
+
+          <div className="w-56 h-56 md:w-72 md:h-72 rounded-full 
+            border border-white/20 
+            bg-white/5 backdrop-blur-md
+            shadow-xl
+            hover:scale-[1.03] transition duration-300
+            overflow-hidden"
+          >
+            <img
+              src="/mypic.jpg"
+              alt="Profile"
+              className="w-full h-full object-cover"
+            />
+          </div>
+
         </div>
+
       </section>
 
       <Divider />
