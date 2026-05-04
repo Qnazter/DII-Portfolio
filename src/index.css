@@ -39,7 +39,7 @@
   
     --gradient-pastel: linear-gradient(120deg,
           #4169e1 0%,
-  #89CFF0 100%);
+          #89CFF0 100%);
     --shadow-soft: 0 8px 30px -10px hsl(230 30% 12% / 0.08);
 
     --sidebar-background: 0 0% 98%;
