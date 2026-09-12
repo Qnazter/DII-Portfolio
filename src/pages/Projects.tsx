@@ -5,7 +5,7 @@ type ProjectItem = {
   title: string;
   description?: string;
   link?: string;
-  tech?: string[]; 
+  tech?: string[];
 };
 
 type Section = {
@@ -32,7 +32,15 @@ const sections: Section[] = [
       {
         id: "1.2",
         title: "Competition Project",
-        note: "No projects here yet",
+        projects: [
+          {
+            title: "LocalLink",
+            description:
+              "A prototype platform for finding trusted local services near you.",
+            link: "https://local-link-nine.vercel.app",
+            tech: ["Vercel", "TypeScript"],
+          },
+        ],
       },
       {
         id: "1.3",
@@ -43,7 +51,7 @@ const sections: Section[] = [
             description:
               "A 2D platformer where players run, jump, and avoid obstacles. Built with C#, focusing on game physics and tilemaps.",
             link: "https://youtu.be/zN1b8Sil0pI?si=_um-ahf64NkAR6O-",
-            tech: ["C#", "Unity"], 
+            tech: ["C#", "Unity"],
           },
         ],
       },
@@ -56,15 +64,21 @@ const sections: Section[] = [
             description:
               "Developed a webpage using WixVibe, I'm focusing on debugging and fixing platform limitations. This project taught me real-world problem solving and adapting to technical constraints",
             link: "https://my-site-mt3ut87v-wattanakraimetpann.wix-vibe.com",
-            tech: ["React", "TailwindCSS", "TypeScript"], 
+            tech: ["React", "TailwindCSS", "TypeScript", "myFirstProject"],
           },
-
           {
             title: "TikTok Downloader Line Bot",
             description:
               "A LINE bot that downloads TikTok videos quickly and easily. Built with Node.js, focusing on API integration and automation.",
             link: "https://line.me/R/ti/p/%40457esiwm",
-            tech: ["Node.js", "Line Messaging API", "Render"], 
+            tech: ["Node.js", "Line Messaging API", "Render"],
+          },
+          {
+            title: "Grade Calculator Line Bot",
+            description:
+              "A LINE bot that collects grade information and calculates final grades based on user input. Built with Node.js, focusing on API integration and automation.",
+            link: "https://line.me/R/ti/p/@934hlemd",
+            tech: ["JavaScript", "Line Messaging API", "Vercel"],
           },
         ],
       },
@@ -86,16 +100,17 @@ const sections: Section[] = [
         projects: [
           {
             title: "Web Building Certification | freeCodeCamp",
-            description: "Learned building web apps for beginners with HTML, CSS, and JavaScript for 300 hours.",
+            description:
+              "Learned building web apps for beginners with HTML, CSS, and JavaScript for 300 hours.",
             link: "https://www.freecodecamp.org/certification/qnazter/responsive-web-design",
             tech: ["HTML", "CSS", "JavaScript"],
           },
           {
             title: "Python Programming | Talent RAC",
-            description: "Learned Python programming concepts With Robotics, AI, and Coding: RAC",
+            description:
+              "Learned Python programming concepts With Robotics, AI, and Coding: RAC",
             link: "https://learn.teacherpd.ipst.ac.th/certificates/70af3196e4a44953adfca01e43dd794a",
             tech: ["Python", "AI"],
-            
           },
         ],
       },
@@ -124,13 +139,15 @@ const sections: Section[] = [
         projects: [
           {
             title: "The 53rd Student Council of CMUDS",
-            description: "Developing communication, responsibility, and leadership skills. Worked in Lighting & Sound, gaining hands-on experience in technical operations and problem-solving.",
+            description:
+              "Developing communication, responsibility, and leadership skills. Worked in Lighting & Sound, gaining hands-on experience in technical operations and problem-solving.",
             link: "https://www.instagram.com/demon53official/",
             tech: ["Leadership", "Communication", "Responsibility"],
           },
           {
             title: "Futsal Player | Team Captain",
-            description: "As team captain at the Jao Ram Games, Led the team to 2nd runner-up out of 11 teams. This experience strengthened my responsibility, resilience, decision-making, and leadership.",
+            description:
+              "As team captain at the Jao Ram Games, Led the team to 2nd runner-up out of 11 teams. This experience strengthened my responsibility, resilience, decision-making, and leadership.",
             link: "https://www.instagram.com/futsal_cmud/",
             tech: ["Teamwork", "Leadership", "Responsibility"],
           },
@@ -172,9 +189,7 @@ const ProjectCard = ({ title, description, link, tech }: ProjectItem) => (
         )}
 
         {description && (
-          <p className="text-sm text-muted-foreground mt-2">
-            {description}
-          </p>
+          <p className="text-sm text-muted-foreground mt-2">{description}</p>
         )}
       </div>
 
